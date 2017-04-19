@@ -1,0 +1,58 @@
+@import "node_modules/bulma/bulma"
+
+$border-color: lightgrey
+
+.trash-item
+	display: inline-block
+	width: 50px
+	height: 50px
+
+	&.-easy
+		background: url('/trash-easy.png') center/cover
+
+	&.-medium
+		background: url('/trash-medium.png') center/cover
+
+	&.-hard
+		background: url('/trash-hard.png') center/cover
+
+.game-board
+	margin: 1em
+
+	.control
+		border-right: 1px solid $border-color
+	.footer
+		position: fixed
+		bottom: 0
+		left: 0
+		right: 0
+		border-top: 1px solid $border-color
+		padding: 0 1em
+
+.counter
+	display: inline-block
+	font-weight: bold
+	margin-right: 1em
+	& > .label
+		display: inline
+		padding-right: 1em
+
+.cash-counter, .trash-counter
+	@extend .counter
+
+.truck-control
+	margin-top: 1em
+
+	& > .count
+		margin-right: 1em
+		line-height: 35px
+	.error
+		color: red
+
+.game-header
+	padding: 1em;
+	border-bottom: 1px solid $border-color
+
+.city-header, .dump-header
+	text-align: center
+	margin-bottom: 1em;
